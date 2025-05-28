@@ -13,7 +13,7 @@ const ProjectsSection: React.FC = () => {
     {
       title: "Sistema de gestão de projetos",
       subtitle: "Abril-2025",
-      srcImg: "/src/assets/images/projeto1.jfif",
+      srcImg: "/projects/projeto1.jfif",
       description:
         "Desenvolvi esse projeto com o objetivo de demonstrar um pouco dos meus conhecimentos e me aprimorar utilizando ferramentas que ainda não havia usado. O projeto consiste em um Gerenciador de Projetos, onde você pode criar seu usuário, gerenciar projetos e adicionar tarefas dentro deles.",
       technologies: "Tecnologias: Java,Spring Boot, React, MySQL",
@@ -22,7 +22,7 @@ const ProjectsSection: React.FC = () => {
     {
       title: "ChatBot Furia",
       subtitle: "Maio-2025",
-      srcImg: "/src/assets/images/projeto2.png",
+      srcImg: "/projects/projeto2.png",
       description:
         "Este é um chatbot especializado em responder perguntas sobre o FURIA Esports (CS:GO/CS2). A aplicação utiliza tecnologias modernas para fornecer respostas rápidas e precisas em tempo real, seja através de respostas pré-definidas ou por meio de uma API de inteligência artificial para perguntas não registradas.",
       technologies:
@@ -32,7 +32,7 @@ const ProjectsSection: React.FC = () => {
     {
       title: "To-do List",
       subtitle: "Janeiro-2025",
-      srcImg: "/src/assets/images/projeto3.png",
+      srcImg: "/projects/projeto3.png",
       description:
         "Este projeto é um To-do List para demonstra conhecimento fullstack, feito para criação, edição e exclusão de tarefas, além de um filtro por Id.",
       technologies: "Tecnologias: Java, Spring Boot, React, MySQL",
@@ -41,7 +41,7 @@ const ProjectsSection: React.FC = () => {
     {
       title: "Transação Bancária",
       subtitle: "Abril-2025",
-      srcImg: "/src/assets/images/projeto4.jfif",
+      srcImg: "/projects/projeto4.jfif",
       description:
         "Desenvolvi esse projeto para simular uma transferência bancária e mostrar um pouco dos meus conhecimentos.",
       technologies: "Tecnologias: Java, Spring boot, PostGreeSQL, Docker",
