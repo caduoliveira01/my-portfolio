@@ -39,26 +39,16 @@ export const StyledDesktopToolbar = styled(Toolbar)(({ theme }) => ({
 
 export default function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const [langAnchorEl, setLangAnchorEl] = React.useState<null | HTMLElement>(
-    null
-  );
   const { t, i18n } = useTranslation();
 
-  // Corrija o tipo do event aqui
   const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleLangMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setLangAnchorEl(event.currentTarget);
-  };
-
   const handleClose = () => {
     setAnchorEl(null);
-    setLangAnchorEl(null);
   };
 
-  // Corrija o tipo do id aqui
   const handleSmoothScroll = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
