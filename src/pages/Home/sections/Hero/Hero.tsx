@@ -6,8 +6,11 @@ import CV from "../../../../assets/pdf/carlos_eduardo_oliveira_silva_CV.pdf";
 import StyledButton from "../../../../components/StyledButton/StyledButton";
 import { AnimatedBackground } from "../../../../components/AnimatedBackground/AnimatedBackground";
 import Typewriter from "../../../../components/TypeWriter/TypeWriter";
+import { useTranslation } from "react-i18next"; // IMPORT ADICIONADO
 
 const HeroSection: React.FC = () => {
+  const { t } = useTranslation(); // HOOK ADICIONADO
+
   const StyledImg = styled("img")(({ theme }) => ({
     width: "80%",
     border: `1px solid ${theme.palette.primary.contrastText}`,
@@ -75,10 +78,10 @@ const HeroSection: React.FC = () => {
                 pb={2}
                 textAlign="center"
               >
-                Carlos Oliveira
+                {t("name")}
               </Typography>
               <Typewriter
-                text="Sou um desenvolvedor!"
+                text={t("title")}
                 delay={120}
                 variant="h2"
                 color="primary.contrastText"
@@ -93,13 +96,13 @@ const HeroSection: React.FC = () => {
                   <Grid size={{ xs: 10, md: 4 }}>
                     <StyledButton onClick={() => handleDownload()}>
                       <DownloadIcon />
-                      <Typography>Meu currículo</Typography>
+                      <Typography>{t("resume")}</Typography>
                     </StyledButton>
                   </Grid>
                   <Grid size={{ xs: 10, md: 4 }}>
                     <StyledButton onClick={() => handleEmail()}>
                       <EmailIcon />
-                      <Typography>Contate-me</Typography>
+                      <Typography>{t("contact")}</Typography>
                     </StyledButton>
                   </Grid>
                 </Grid>

@@ -9,7 +9,9 @@ import {
 } from "@mui/material";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import SchoolIcon from "@mui/icons-material/School";
+import WorkIcon from "@mui/icons-material/Work"; // ÍCONE ALTERADO AQUI
 import AnimationComponent from "../../../../components/AnimationComponent/AnimationComponent";
+import { useTranslation } from "react-i18next"; // IMPORT ADICIONADO
 
 import {
   SiJavascript,
@@ -26,6 +28,8 @@ import {
 } from "react-icons/si";
 
 const AboutSection: React.FC = () => {
+  const { t } = useTranslation(); // HOOK ADICIONADO
+
   const StyledCard = styled(Card)(({ theme }) => ({
     padding: "10px 10px",
     textAlign: "center",
@@ -58,7 +62,7 @@ const AboutSection: React.FC = () => {
     <Container maxWidth="lg">
       <Box id="about" pt={5} mb={3}>
         <Typography variant="h2" textAlign="center">
-          Sobre mim
+          {t("aboutTitle")}
         </Typography>
       </Box>
       <Grid container spacing={2} justifyContent="center" pb={3}>
@@ -67,13 +71,11 @@ const AboutSection: React.FC = () => {
             <StyledCard variant="outlined">
               <WorkspacePremiumIcon />
               <Typography textAlign="center" fontWeight={600}>
-                Experiência Acadêmica
+                {t("academicExperience")}
               </Typography>
-              <Typography textAlign="center">3 Anos</Typography>
-              <Typography textAlign="center">
-                Desenvolvedor Fullstack
-              </Typography>
-              <Typography textAlign="center">Analista de dados</Typography>
+              <Typography textAlign="center">{t("years")}</Typography>
+              <Typography textAlign="center">{t("fullstack")}</Typography>
+              <Typography textAlign="center">{t("dataAnalyst")}</Typography>
             </StyledCard>
           </AnimationComponent>
         </Grid>
@@ -82,14 +84,22 @@ const AboutSection: React.FC = () => {
             <StyledCard variant="outlined">
               <SchoolIcon />
               <Typography textAlign="center" fontWeight={600}>
-                Formação
+                {t("education")}
               </Typography>
-              <Typography textAlign="center">
-                Técnico Mecânico - ETEC Alfredo de Barros Santos
+              <Typography textAlign="center">{t("education1")}</Typography>
+              <Typography textAlign="center">{t("education2")}</Typography>
+            </StyledCard>
+          </AnimationComponent>
+        </Grid>
+        <Grid size={{ xs: 9, md: 3 }}>
+          <AnimationComponent moveDirection="left">
+            <StyledCard variant="outlined">
+              <WorkIcon /> {/* ÍCONE ALTERADO AQUI */}
+              <Typography textAlign="center" fontWeight={600}>
+                {t("professionalExperience")}
               </Typography>
-              <Typography textAlign="center">
-                Análise e Desenvolvimento de Sistemas - FATEC Guaratinguetá
-              </Typography>
+              <Typography textAlign="center">{t("intern")}</Typography>
+              <Typography textAlign="center">{t("developer")}</Typography>
             </StyledCard>
           </AnimationComponent>
         </Grid>
@@ -97,18 +107,10 @@ const AboutSection: React.FC = () => {
 
       <Box pb={1}>
         <Typography textAlign="center">
-          Tenho 22 anos e sou apaixonado por tecnologia desde a infância.
-          Atualmente, estou concluindo minha graduação em Análise e
-          Desenvolvimento de Sistemas pela FATEC Guaratinguetá. Ao longo da
-          minha formação, tive contato com diferentes tecnologias e participei
-          de projetos que reforçaram minha curiosidade, capacidade de
-          aprendizado e foco em entregar soluções funcionais.
+          {t("aboutText")}
           <br />
           <br />
-          Estou sempre buscando novos desafios e oportunidades para crescer
-          profissionalmente. Acredito que a tecnologia tem o poder de
-          transformar realidades, e meu objetivo é contribuir ativamente para
-          isso, desenvolvendo aplicações modernas, eficientes e com propósito.
+          {t("aboutText2")}
         </Typography>
       </Box>
 
@@ -116,7 +118,7 @@ const AboutSection: React.FC = () => {
 
       <Box id="skills" pt={3} mb={3}>
         <Typography variant="h3" textAlign="center" fontWeight={300}>
-          Habilidades
+          {t("skillsTitle")}
         </Typography>
       </Box>
       <Box mb={5}>

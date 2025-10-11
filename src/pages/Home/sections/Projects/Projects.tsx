@@ -3,48 +3,46 @@ import AnimationComponent from "../../../../components/AnimationComponent/Animat
 import ProjectCard, {
   type ProjectCardProps,
 } from "../../../../components/ProjectCard/ProjectCard";
+import { useTranslation } from "react-i18next";
 
 const ProjectsSection: React.FC = () => {
+  const { t } = useTranslation();
+
   const StyledExperience = styled("div")(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
   }));
 
   const projects = [
     {
-      title: "Sistema de gestão de projetos",
-      subtitle: "Abril-2025",
+      title: t("projects.project1.title"),
+      subtitle: t("projects.project1.subtitle"),
       srcImg: "/projects/projeto1.jfif",
-      description:
-        "Desenvolvi esse projeto com o objetivo de demonstrar um pouco dos meus conhecimentos e me aprimorar utilizando ferramentas que ainda não havia usado. O projeto consiste em um Gerenciador de Projetos, onde você pode criar seu usuário, gerenciar projetos e adicionar tarefas dentro deles.",
-      technologies: "Tecnologias: Java,Spring Boot, React, MySQL",
+      description: t("projects.project1.description"),
+      technologies: t("projects.project1.technologies"),
       codeURL: "https://github.com/caduoliveira01/ManagementSystem",
     },
     {
-      title: "ChatBot Furia",
-      subtitle: "Maio-2025",
+      title: t("projects.project2.title"),
+      subtitle: t("projects.project2.subtitle"),
       srcImg: "/projects/projeto2.png",
-      description:
-        "Este é um chatbot especializado em responder perguntas sobre o FURIA Esports (CS:GO/CS2). A aplicação utiliza tecnologias modernas para fornecer respostas rápidas e precisas em tempo real, seja através de respostas pré-definidas ou por meio de uma API de inteligência artificial para perguntas não registradas.",
-      technologies:
-        "Tecnologias: Node.js, React, MongoDB, Docker, API de IA: Hugging Face",
+      description: t("projects.project2.description"),
+      technologies: t("projects.project2.technologies"),
       codeURL: "https://github.com/caduoliveira01/Furia-ChatBot",
     },
     {
-      title: "To-do List",
-      subtitle: "Janeiro-2025",
+      title: t("projects.project3.title"),
+      subtitle: t("projects.project3.subtitle"),
       srcImg: "/projects/projeto3.png",
-      description:
-        "Este projeto é um To-do List para demonstra conhecimento fullstack, feito para criação, edição e exclusão de tarefas, além de um filtro por Id.",
-      technologies: "Tecnologias: Java, Spring Boot, React, MySQL",
+      description: t("projects.project3.description"),
+      technologies: t("projects.project3.technologies"),
       codeURL: "https://github.com/caduoliveira01/to-do-list",
     },
     {
-      title: "Transação Bancária",
-      subtitle: "Abril-2025",
+      title: t("projects.project4.title"),
+      subtitle: t("projects.project4.subtitle"),
       srcImg: "/projects/projeto4.jfif",
-      description:
-        "Desenvolvi esse projeto para simular uma transferência bancária e mostrar um pouco dos meus conhecimentos.",
-      technologies: "Tecnologias: Java, Spring boot, PostGreeSQL, Docker",
+      description: t("projects.project4.description"),
+      technologies: t("projects.project4.technologies"),
       codeURL: "https://github.com/caduoliveira01/SimularTransacao",
     },
   ];
@@ -58,7 +56,7 @@ const ProjectsSection: React.FC = () => {
             textAlign="center"
             color="primary.contrastText"
           >
-            Projetos
+            {t("projectsTitle")}
           </Typography>
         </Box>
         <Grid container spacing={5} pb={3}>

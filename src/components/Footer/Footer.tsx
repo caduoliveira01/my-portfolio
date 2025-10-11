@@ -2,8 +2,11 @@ import { Box, Container, IconButton, Typography } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
+import { useTranslation } from "react-i18next"; // IMPORT ADICIONADO
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation(); // HOOK ADICIONADO
+
   return (
     <>
       <Box pt={2} pb={2}>
@@ -38,9 +41,7 @@ const Footer: React.FC = () => {
               </IconButton>
             </a>
           </Box>
-          <Typography textAlign="center">
-            © 2024 Carlos Oliveira - Todos os direitos reservados
-          </Typography>
+          <Typography textAlign="center">{t("copyright")}</Typography>
         </Container>
       </Box>
     </>

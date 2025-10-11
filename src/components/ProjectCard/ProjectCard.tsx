@@ -1,5 +1,6 @@
 import { Grid, Typography, styled } from "@mui/material";
 import StyledButton from "../StyledButton/StyledButton";
+import { useTranslation } from "react-i18next"; // IMPORT ADICIONADO
 
 export interface ProjectCardProps {
   title: string;
@@ -18,6 +19,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   technologies,
   codeURL,
 }) => {
+  const { t } = useTranslation(); // HOOK ADICIONADO
+
   const StyledImg = styled("img")(({ theme }) => ({
     width: "100%",
     objectFit: "contain",
@@ -51,7 +54,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <Grid container spacing={1} pt={2} display="flex" justifyContent="center">
         <Grid size={{ xs: 6 }}>
           <StyledButton onClick={() => window.open(codeURL)}>
-            Acesse o código.
+            {t("accessCode")}
           </StyledButton>
         </Grid>
       </Grid>
